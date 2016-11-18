@@ -5,10 +5,13 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { AssetsComponent, DialogContent } from './assets/assets.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AssetsComponent,
+    DialogContent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +20,7 @@ import { AppComponent } from './app.component';
     MaterialModule.forRoot() 
   ],
   providers: [],
+  entryComponents: [DialogContent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
