@@ -1,3 +1,16 @@
-<md-grid-list cols="4">
-<trk-user-item *ngFor="let user of userlist | async" [user]="user"></trk-user-item>
+<md-grid-list cols="5" rowHeight="200px">
+
+<md-grid-tile *ngFor="let user of userlist | async">
+	<md-grid-tile-header style="background: black">
+		<h3 md-line>{{user.email }}</h3>
+	</md-grid-tile-header>
+	<md-grid-tile-footer>
+		<h3 md-line>{{user.name.first | uppercase}} {{user.name.last | uppercase}}</h3>
+		<button md-icon-button (click)="showuser(user)">
+		<md-icon>info</md-icon>
+		</button>
+	</md-grid-tile-footer>
+<img src="{{user.picture.large}}">
+	
+</md-grid-tile>
 </md-grid-list>
