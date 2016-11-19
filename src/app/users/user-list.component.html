@@ -1,4 +1,4 @@
-<md-grid-list cols="5" rowHeight="200px">
+<md-grid-list cols="4" rowHeight="200px">
 
 <md-grid-tile *ngFor="let user of userlist | async">
 	<md-grid-tile-header style="background: black">
@@ -6,7 +6,7 @@
 	</md-grid-tile-header>
 	<md-grid-tile-footer>
 		<h3 md-line>{{user.name.first | uppercase}} {{user.name.last | uppercase}}</h3>
-		<button md-icon-button (click)="showuser(user)">
+		<button md-icon-button (click)="showUser(user)">
 		<md-icon>info</md-icon>
 		</button>
 	</md-grid-tile-footer>

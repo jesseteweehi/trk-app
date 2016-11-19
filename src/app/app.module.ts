@@ -10,6 +10,7 @@ import { AssetsComponent, DialogContent } from './assets/assets.component';
 import { UserItemComponent } from './users/user-item.component';
 import { UserListComponent } from './users/user-list.component';
 import { HeaderComponent } from './header.component';
+import { SideNavComponent } from './side-nav.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -27,7 +28,8 @@ export const firebaseConfig = {
     DialogContent,
     UserItemComponent,
     UserListComponent,
-    HeaderComponent
+    HeaderComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

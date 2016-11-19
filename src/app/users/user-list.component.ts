@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, ViewContainerRef, OnInit } from '@angular/core';
+import { MdSidenav } from '@angular/material';
+
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 import { UserItemComponent } from './user-item.component';
@@ -17,6 +19,12 @@ export class UserListComponent implements OnInit {
 
   constructor(af: AngularFire) {
   	this.userlist = af.database.list('users')
+  }
+
+  @Input('sidenav') sidenav: MdSidenav;
+
+  showUser(user) {
+    this.sidenav.open();
   }
 
   ngOnInit() {

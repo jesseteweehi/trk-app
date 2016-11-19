@@ -1,0 +1,20 @@
+<md-sidenav-layout>
+	<md-sidenav align="end" mode="side" opened #sidenav>
+		<button md-raised-button (click)="sidenav.close()" color="accent">CLOSE</button>
+		<md-tab-group>
+			<md-tab>
+				<template md-tab-label>Details</template>
+				<template md-tab-content>Details Content Here</template>
+			</md-tab>
+			<md-tab>
+				<template md-tab-label>Other Details</template>
+				<template md-tab-content>Different Details here</template>
+			</md-tab>
+			<md-tab>
+				<template md-tab-label>Very Other Details</template>
+				<template md-tab-content>Very Different Details here</template>
+			</md-tab>
+		</md-tab-group>
+	</md-sidenav>
+<trk-user-list [sidenav]="sidenav"></trk-user-list>
+</md-sidenav-layout>
