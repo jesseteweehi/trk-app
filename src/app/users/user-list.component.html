@@ -1,5 +1,3 @@
-<p>
-  user-list works!
-</p>
-
+<md-grid-list cols="4">
 <trk-user-item *ngFor="let user of userlist | async" [user]="user"></trk-user-item>
+</md-grid-list>
