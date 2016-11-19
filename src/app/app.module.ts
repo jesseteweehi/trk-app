@@ -7,8 +7,6 @@ import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 import { AssetsComponent, DialogContent } from './assets/assets.component';
-import { UsersComponent } from './users/users.component';
-import { UserslistComponent } from './users/userslist.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -23,9 +21,7 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     AssetsComponent,
-    DialogContent,
-    UsersComponent,
-    UserslistComponent
+    DialogContent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AssetsComponent, DialogContent } from './assets/assets.component';
-import { UserslistComponent } from './users/userslist.component';
 
 @Component({
   selector: 'trk-root',
