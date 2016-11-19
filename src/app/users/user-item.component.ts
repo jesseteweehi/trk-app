@@ -1,0 +1,15 @@
+import { Component, OnInit, Input } from '@angular/core';
+
+@Component({
+  selector: 'trk-user-item',
+  templateUrl: './user-item.component.html'
+})
+export class UserItemComponent implements OnInit {
+	@Input() user: Object;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
