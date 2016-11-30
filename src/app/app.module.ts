@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { AngularFireModule } from 'angularfire2';
@@ -11,6 +11,7 @@ import { UserItemComponent } from './users/user-item.component';
 import { UserListComponent } from './users/user-list.component';
 import { HeaderComponent } from './header.component';
 import { SideNavComponent } from './side-nav.component';
+import { FormsComponent } from './forms/forms.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -29,11 +30,12 @@ export const firebaseConfig = {
     UserItemComponent,
     UserListComponent,
     HeaderComponent,
-    SideNavComponent
+    SideNavComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     MaterialModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig) 

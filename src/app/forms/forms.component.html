@@ -1,0 +1,19 @@
+<md-card>
+  <md-toolbar color="white">Learning Experience</md-toolbar>
+  <md-card-content>
+    <form [formGroup]="form">
+    <md-input formControlName="title" placeholder="Title" style="width: 100%"></md-input>
+
+    <md-textarea style="width: 100%" formControlName="learningIntention"  placeholder="Learning Intention" value=""></md-textarea>
+
+    <md-textarea style="width: 100%" formControlName="description" placeholder="Description" value=""></md-textarea>
+
+    <md-input formControlName="learningStatus"  placeholder="Learning Status" style="width: 100%"></md-input>
+ 
+    </form>
+  </md-card-content>
+</md-card>
+
+<p>
+Form: {{ form.value | json }}
+</p>
