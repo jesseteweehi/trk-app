@@ -5,6 +5,9 @@ import { AngularFire, FirebaseAuth } from 'angularfire2';
   selector: 'trk-header',
   templateUrl: './header.component.html',
   styles: [`
+  md-toolbar-row {
+    justify-content: space-between;
+  }
   `]
 
 })
@@ -12,7 +15,7 @@ export class HeaderComponent implements OnInit {
   authenticated: any;
 
   constructor(public af: AngularFire) {
-  	this.authenticated = this.af.auth.subscribe(auth => console.log(auth));
+  	this.af.auth.subscribe(auth => this.authenticated = auth);
   }
 
   login() {

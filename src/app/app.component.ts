@@ -7,5 +7,4 @@ import { AssetsComponent, DialogContent } from './assets/assets.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'trk works!';
 }

@@ -1,13 +1,19 @@
-<div>
 <md-toolbar color="primary">
-  <span>Rond</span>
+  <span> <a routerLink="/">Rond</a></span>
 
-  <button md-icon-button (click)="login()">
-		<md-icon>account_box</md-icon>
-  </button>
-  <button md-icon-button (click)="logout()">
-		<md-icon>account_box</md-icon>
-  </button>
+<button md-icon-button [md-menu-trigger-for]="menu">
+   <md-icon>account_circle</md-icon>
+</button>
 
 </md-toolbar>
-</div>
+
+<md-menu #menu="mdMenu">
+
+    <button *ngIf="authenticated" md-menu-item > Signed in as {{authenticated.auth.displayName}} </button>
+    <button *ngIf="!authenticated" md-menu-item (click)="login()"> Sign In </button>
+    <button md-menu-item routerLink="user"> Your Profile </button>
+    <button md-menu-item> Your Learning Experiences </button>
+    <button md-menu-item (click)="logout()"> Sign Out </button>
+</md-menu>
+
+<router-outlet></router-outlet>
