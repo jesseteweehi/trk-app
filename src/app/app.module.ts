@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 import { AssetsComponent, DialogContent } from './assets/assets.component';
@@ -22,6 +22,11 @@ export const firebaseConfig = {
     messagingSenderId: "285724076007"
 };
 
+const myFirebaseAuthConfig = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Redirect
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +43,7 @@ export const firebaseConfig = {
     ReactiveFormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig) 
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig) 
   ],
   providers: [],
   entryComponents: [DialogContent],
