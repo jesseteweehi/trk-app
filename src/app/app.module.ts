@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { AssetsComponent, DialogContent } from './assets/assets.component';

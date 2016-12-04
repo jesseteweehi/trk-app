@@ -1,3 +1,39 @@
-<p>
-  home works!
-</p>
+<md-toolbar color="primary">
+  <!-- <span>Application Title</span> -->
+
+  <button md-icon-button routerLink="">
+   <md-icon>home</md-icon>
+  </button>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <button *ngIf = "af.auth | async" md-icon-button [md-menu-trigger-for]="menu">
+   <md-icon>more_vert</md-icon>
+  </button>
+
+  <button md-icon-button [md-menu-trigger-for]="accountmenu">
+   <md-icon>account_box</md-icon>
+  </button>
+
+
+
+</md-toolbar>
+
+<md-menu x-position="before" #accountmenu="mdMenu">
+    <button *ngIf = "af.auth | async" md-menu-item> Signed in as {{authob.auth.displayName}} </button>
+    <button *ngIf = "!(af.auth | async)" md-menu-item (click)="login()">Sign In</button>
+    <button md-menu-item routerLink="user">Profile</button>
+    <button md-menu-item (click)="logout()">Sign Out</button>
+</md-menu>
+
+
+<md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>Overview</button>
+    <button md-menu-item>Deadlines</button>
+    <button md-menu-item>Goals</button>
+    <button md-menu-item>Attained</button>
+    <button md-menu-item>Learning Experiences</button>
+</md-menu>
+
+<router-outlet></router-outlet>

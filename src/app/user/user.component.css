@@ -1,0 +1,15 @@
+md-sidenav-layout {
+	height: 100vh;
+}
+
+md-sidenav {
+	width: 500px;
+}
+
+md-toolbar {
+/*	min-height: 10px;*/
+}
+
+md-card {
+	margin: 10px;
+}
