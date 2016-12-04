@@ -1,8 +1,9 @@
 import { Routes, RouterModule } from '@angular/router';
-import { HeaderComponent } from './header.component';
+import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 
 const APP_ROUTES: Routes = [
+ {path: '', component: AppComponent},
  {path: 'user', component: UserComponent},
 ];
 

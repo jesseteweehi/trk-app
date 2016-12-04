@@ -1,3 +1,10 @@
-<p>
-  user works!
-</p>
+<md-card>
+   <md-card-title-group>
+      <img md-card-sm-image src="{{authenticated.auth.photoURL}}">
+      <md-card-title>{{authenticated.auth.displayName}}</md-card-title>
+      <md-card-subtitle>{{authenticated.auth.email}}</md-card-subtitle>
+   </md-card-title-group>
+</md-card>
+
+
+{{ authenticated | json }}

@@ -9,11 +9,11 @@ import { AppComponent } from './app.component';
 import { AssetsComponent, DialogContent } from './assets/assets.component';
 import { UserItemComponent } from './users/user-item.component';
 import { UserListComponent } from './users/user-list.component';
-import { HeaderComponent } from './header.component';
 import { SideNavComponent } from './side-nav.component';
 import { FormsComponent } from './forms/forms.component';
 import { routing } from './app.routing';
 import { UserComponent } from './user/user.component';
+import { HomeComponent } from './home/home.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -36,10 +36,10 @@ const myFirebaseAuthConfig = {
     DialogContent,
     UserItemComponent,
     UserListComponent,
-    HeaderComponent,
     SideNavComponent,
     FormsComponent,
-    UserComponent
+    UserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
