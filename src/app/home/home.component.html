@@ -23,13 +23,13 @@
 <md-menu x-position="before" #accountmenu="mdMenu">
     <button *ngIf = "af.auth | async" md-menu-item> Signed in as {{authob.auth.displayName}} </button>
     <button *ngIf = "!(af.auth | async)" md-menu-item (click)="login()">Sign In</button>
-    <button md-menu-item routerLink="user">Profile</button>
+    <button md-menu-item routerLink="profile">Profile</button>
     <button md-menu-item (click)="logout()">Sign Out</button>
 </md-menu>
 
 
 <md-menu x-position="before" #menu="mdMenu">
-    <button md-menu-item>Overview</button>
+    <button md-menu-item routerLink="user">Overview</button>
     <button md-menu-item>Deadlines</button>
     <button md-menu-item>Goals</button>
     <button md-menu-item>Attained</button>

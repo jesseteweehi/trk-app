@@ -17,6 +17,8 @@
   </md-sidenav>
 
   <md-toolbar color="accent">Profile
+    <button md-button>Button 1</button>
+    <button md-button>Button 2</button>
     <span class="example-fill-remaining-space"></span>
 
     <button *ngIf="!sidenav.opened" md-icon-button (click)="sidenav.open()">
@@ -42,6 +44,8 @@
 
 
 {{ form.value |  json }}
+
+{{ authenticated.auth | json }}
 
 {{ authenticated.auth | json }}
 
