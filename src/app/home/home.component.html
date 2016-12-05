@@ -29,11 +29,11 @@
 
 
 <md-menu x-position="before" #menu="mdMenu">
-    <button md-menu-item routerLink="user">Overview</button>
-    <button md-menu-item>Deadlines</button>
+    <button md-menu-item routerLink="user/overview">Overview</button>
+<!--     <button md-menu-item>Deadlines</button>
     <button md-menu-item>Goals</button>
-    <button md-menu-item>Attained</button>
-    <button md-menu-item>Learning Experiences</button>
+    <button md-menu-item>Attained</button> -->
+    <button md-menu-item routerLink="user/learningexperiences"> Learning Experiences</button>
 </md-menu>
 
 <router-outlet></router-outlet>

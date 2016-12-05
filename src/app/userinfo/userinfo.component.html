@@ -7,16 +7,18 @@
       <span class="example-fill-remaining-space"></span>
     </md-toolbar>
 
+    <md-card>
     <p> Info to come </p>
-
+    </md-card>
+    
   </md-sidenav>
 
   <md-toolbar color="accent">
-    <button md-button>Overview</button>
-    <button md-button>Deadlines</button>
+    <button routerLink="overview" md-button>Overview</button>
+ <!--    <button md-button>Deadlines</button>
     <button md-button>Goals</button>
-    <button md-button>Attained</button>
-    <button md-button>Learning Experiences</button>
+    <button md-button>Attained</button> -->
+    <button routerLink="learningexperiences" md-button>Learning Experiences</button>
     <span class="example-fill-remaining-space"></span>
 
     <button *ngIf="!sidenav.opened" md-icon-button (click)="sidenav.open()">
@@ -24,9 +26,7 @@
     </button>
   </md-toolbar>
 
-  <md-card>
-    <p>Info to come</p>
-  </md-card>
+  <router-outlet></router-outlet>
   
 
 

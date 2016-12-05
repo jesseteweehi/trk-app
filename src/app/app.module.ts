@@ -16,6 +16,8 @@ import { routing } from './app.routing';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
+import { OverviewComponent } from './userinfo/overview.component';
+import { LearningExperiencesComponent } from './userinfo/learning-experiences.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -42,7 +44,9 @@ const myFirebaseAuthConfig = {
     FormsComponent,
     UserComponent,
     HomeComponent,
-    UserinfoComponent
+    UserinfoComponent,
+    OverviewComponent,
+    LearningExperiencesComponent
   ],
   imports: [
     BrowserModule,
