@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LearningExperience } from './learning-experience';
 
 @Component({
   selector: 'trk-learning-experiences',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./learning-experiences.component.css']
 })
 export class LearningExperiencesComponent implements OnInit {
+  learningExperiences : LearningExperience[] = [];
 
   constructor() { }
 

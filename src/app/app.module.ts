@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import { OverviewComponent } from './userinfo/overview.component';
 import { LearningExperiencesComponent } from './userinfo/learning-experiences.component';
+import { LearningExperienceItemComponent } from './userinfo/learning-experience-item.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -46,7 +47,8 @@ const myFirebaseAuthConfig = {
     HomeComponent,
     UserinfoComponent,
     OverviewComponent,
-    LearningExperiencesComponent
+    LearningExperiencesComponent,
+    LearningExperienceItemComponent
   ],
   imports: [
     BrowserModule,
