@@ -19,6 +19,8 @@ import { UserinfoComponent } from './userinfo/userinfo.component';
 import { OverviewComponent } from './userinfo/overview.component';
 import { LearningExperiencesComponent } from './userinfo/learning-experiences.component';
 import { LearningExperienceItemComponent } from './userinfo/learning-experience-item.component';
+import { LearningExperienceService } from './userinfo/learning-experience.service';
+import { LearningExperienceFormComponent } from './userinfo/learning-experience-form/learning-experience-form.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -48,7 +50,8 @@ const myFirebaseAuthConfig = {
     UserinfoComponent,
     OverviewComponent,
     LearningExperiencesComponent,
-    LearningExperienceItemComponent
+    LearningExperienceItemComponent,
+    LearningExperienceFormComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,7 @@ const myFirebaseAuthConfig = {
     MaterialModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig) 
   ],
-  providers: [],
+  providers: [LearningExperienceService],
   entryComponents: [DialogContent],
   bootstrap: [AppComponent]
 })

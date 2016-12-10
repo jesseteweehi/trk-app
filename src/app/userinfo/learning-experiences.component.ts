@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LearningExperience } from './learning-experience';
+import { LearningExperienceService } from './learning-experience.service';
+
 
 @Component({
   selector: 'trk-learning-experiences',
@@ -8,8 +10,11 @@ import { LearningExperience } from './learning-experience';
 })
 export class LearningExperiencesComponent implements OnInit {
   learningExperiences : LearningExperience[] = [];
+  learningExperience = new LearningExperience('Learning Experience 1', 1, 'Maths', 'Dummy learning Intention', 'Dummy Learning description')
 
-  constructor() { }
+  constructor(private les: LearningExperienceService) { 
+   this.learningExperiences = this.les.getLearningExperienceList();
+  }
 
   ngOnInit() {
   }

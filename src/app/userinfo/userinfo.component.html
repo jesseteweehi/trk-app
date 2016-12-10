@@ -6,12 +6,15 @@
       </button>  
       <span class="example-fill-remaining-space"></span>
     </md-toolbar>
-
-    <md-card>
-    <p> Info to come </p>
-    </md-card>
-    
-  </md-sidenav>
+<md-tab-group>
+  <md-tab label="Learning Experience">
+    <trk-learning-experience-form></trk-learning-experience-form>
+  </md-tab>
+  <md-tab label="Learning Experiences">
+    <p>Pther</p>
+  </md-tab>
+</md-tab-group>
+</md-sidenav>
 
   <md-toolbar color="accent">
     <button routerLink="overview" md-button>Overview</button>
@@ -28,8 +31,6 @@
 
   <router-outlet></router-outlet>
   
-
-
 </md-sidenav-layout>
 
 

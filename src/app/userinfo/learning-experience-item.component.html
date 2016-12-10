@@ -1,3 +1,13 @@
-<p>
-  learning-experience-item works!
-</p>
+<md-card>
+   <md-card-subtitle>Level {{learningExperience.level}} {{learningExperience.subject}}</md-card-subtitle>
+   <md-card-title>{{learningExperience.title}}</md-card-title>   
+   <md-card-content>
+        <p><span>Learning Intention</span>: {{learningExperience.learningIntention}}</p>
+        <p><span></span>{{learningExperience.description}}</p>
+   </md-card-content>
+   <md-card-actions>
+   		<span example-fill-remaining-space></span>
+        <button md-raised-button color="primary">Add to User</button>
+      <!--   <button md-button>SHARE</button> -->
+   </md-card-actions>
+</md-card>

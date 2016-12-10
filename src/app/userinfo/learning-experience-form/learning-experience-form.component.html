@@ -1,0 +1,36 @@
+<md-card>
+  <md-toolbar color="white">Learning Experience</md-toolbar>
+  <md-card-content>
+
+ 
+
+    <form [formGroup]="learningExperienceForm">
+  
+
+ 
+    
+    <md-input formControlName="title" placeholder="Title" style="width: 100%" ref-title >
+    	<md-hint>{{learningExperienceForm.controls.title.valid }}</md-hint>
+<!-- myForm.controls.name.valid -->
+    </md-input>
+
+    
+
+    <md-input formControlName="level" placeholder="Level" style="width: 100%" #refNam >
+    
+    </md-input>
+
+    <md-textarea style="width: 100%" formControlName="learningIntention"  placeholder="Learning Intention" value=""></md-textarea>
+
+    <md-textarea style="width: 100%" formControlName="description" placeholder="Description" value=""></md-textarea>
+
+    <md-input formControlName="learningStatus"  placeholder="Learning Status" style="width: 100%"></md-input>
+ 
+    </form>
+  </md-card-content>
+</md-card>
+
+<p>
+Form: {{ learningExperienceForm.valid | json }}
+</p>
+

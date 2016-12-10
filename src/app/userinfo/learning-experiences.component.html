@@ -1,3 +1,6 @@
-<md-card>
-  learning-experiences works!
-</md-card>
+<md-list>
+   <trk-learning-experience-item *ngFor="let learningExperience of learningExperiences" [learningExperience]="learningExperience"></trk-learning-experience-item>
+</md-list>
+
+
+<!-- *ngfor="let learningExperience for learningExperiences"  -->
