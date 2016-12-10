@@ -1,5 +1,5 @@
 <md-list>
-   <trk-learning-experience-item *ngFor="let learningExperience of learningExperiences" [learningExperience]="learningExperience"></trk-learning-experience-item>
+   <trk-learning-experience-item *ngFor="let learningExperience of learningExperiences | async" [learningExperience]="learningExperience"></trk-learning-experience-item>
 </md-list>
 
 

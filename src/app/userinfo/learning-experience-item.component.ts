@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { LearningExperience } from './learning-experience';
+
 
 @Component({
   selector: 'trk-learning-experience-item',
@@ -7,7 +7,7 @@ import { LearningExperience } from './learning-experience';
   styleUrls: ['./learning-experience-item.component.css']
 })
 export class LearningExperienceItemComponent implements OnInit {
-  @Input() learningExperience: LearningExperience;
+  @Input() learningExperience: Object;
 
   constructor() { }
 

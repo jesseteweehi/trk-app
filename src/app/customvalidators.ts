@@ -7,7 +7,6 @@ function inArray(n,a) {
   	return a.includes(n);
   }
 
-
 export class CustomValidators {
 
 	static levelNumber(control: AbstractControl): {[key: string]: boolean} {

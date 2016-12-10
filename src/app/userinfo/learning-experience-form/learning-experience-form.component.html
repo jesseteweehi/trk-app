@@ -4,27 +4,27 @@
 
  
 
-    <form [formGroup]="learningExperienceForm">
+    <form [formGroup]="learningExperienceForm" (ngSubmit)="onSubmit()">
   
 
- 
-    
-    <md-input formControlName="title" placeholder="Title" style="width: 100%" ref-title >
-    	<md-hint>{{learningExperienceForm.controls.title.valid }}</md-hint>
-<!-- myForm.controls.name.valid -->
-    </md-input>
+    <md-input formControlName="title" placeholder="Title" style="width: 100%"></md-input>
 
-    
-
-    <md-input formControlName="level" placeholder="Level" style="width: 100%" #refNam >
-    
+    <md-input formControlName="level" placeholder="Level" style="width: 100%" required >
+      <md-hint align="end" *ngIf="!learningExperienceForm.controls.level.valid && !learningExperienceForm.controls.level.pristine">We only have Level 9 - 13</md-hint>
     </md-input>
+    
+    <p>Subject</p>
+    <select style="width: 100%">
+      <option *ngFor="let subject of subjects" value="{{subject}}">{{subject}}</option>
+    </select>
 
     <md-textarea style="width: 100%" formControlName="learningIntention"  placeholder="Learning Intention" value=""></md-textarea>
 
     <md-textarea style="width: 100%" formControlName="description" placeholder="Description" value=""></md-textarea>
 
     <md-input formControlName="learningStatus"  placeholder="Learning Status" style="width: 100%"></md-input>
+
+    <button type="submit" md-raised-button [disabled]="!learningExperienceForm.valid">Submit</button>
  
     </form>
   </md-card-content>

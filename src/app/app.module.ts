@@ -61,7 +61,7 @@ const myFirebaseAuthConfig = {
     MaterialModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig) 
   ],
-  providers: [LearningExperienceService],
+  providers: [],
   entryComponents: [DialogContent],
   bootstrap: [AppComponent]
 })
