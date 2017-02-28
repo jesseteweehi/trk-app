@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LearningExperience } from './learning-experience';
-import { LearningExperienceService } from './learning-experience.service';
 
 import { AngularFire, FirebaseAuth, FirebaseObjectObservable, FirebaseListObservable} from 'angularfire2';
+
+import "rxjs/add/operator/map";
 
 
 @Component({
@@ -14,12 +14,20 @@ export class LearningExperiencesComponent{
   learningExperiences: FirebaseListObservable<any>;
 
   constructor(af: AngularFire) { 
-    this.learningExperiences = af.database.list('/learningexperience', { query: {
-    orderByKey: true
-    }
-    });
+    this.learningExperiences = af.database.list('/learningexperience', { 
+      query: {
+        limitTolast: 100
+      }
+    }).map((array) => array.reverse()) as FirebaseListObservable<any[]>;
   }
 }
 
+// import "rxjs/add/operator/map";
 
-  
+// ...
+
+// this.stories = af.database.list('/stories', {
+//   query: {
+//     limitToLast: 24
+//   }
+// }).map((array) => array.reverse()) as FirebaseListObservable<any[]>;
